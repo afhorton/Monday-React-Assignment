@@ -5,8 +5,10 @@
   text-align: center;
 }
 
-#counter {
+.counter {
   font-size: 45;
+  font-weight: bolder;
+  color: green;
 }
 
 .logo {

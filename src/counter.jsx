@@ -1,20 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function Counter () {
 const [count, setCount ] = useState(0);
+let intervalId = null;
 
 const handleCount = () => {
     setCount(count + 1);
 }
 
+useEffect(() => {
+    intervalId = setInterval(() => {handleCount();}, 3000)
+    return () => {
+        if(intervalId) {
+            clearInterval(intervalId);
+        
+        }
+    }
+},[count])
+
+const handleReset = () => {
+    if (intervalId) {
+        clearInterval(intervalId);
+    }
+  setCount(0);
+};
+
 return (
   <>
     <div>
-      <p id="counter">{count}</p>
+      <p className="counter">{count}</p>
     </div>
     <button onClick={handleCount}>Click me!</button>
-    <div></div>
+    <div>
+        <button onClick={handleReset}>Reset</button>
+    </div>
   </>
 );
 
