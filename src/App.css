@@ -13,8 +13,15 @@
 
 .controlDiv {
   display: flex;
+  padding: 10px;
+  justify-content: space-between;
 }
 
+.controlDiv button {
+background: linear-gradient(0deg, #64ce64 0%, #c6f0c9 100%);
+margin: 10px;
+box-shadow: 5px 5px 10px 1px #000000;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
