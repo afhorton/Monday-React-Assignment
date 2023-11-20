@@ -31,8 +31,8 @@ return (
     <div>
       <p className="counter">{count}</p>
     </div>
+    <div className="controlDiv">
     <button onClick={handleCount}>Click me!</button>
-    <div>
         <button onClick={handleReset}>Reset</button>
     </div>
   </>

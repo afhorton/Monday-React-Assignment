@@ -11,6 +11,10 @@
   color: green;
 }
 
+.controlDiv {
+  display: flex;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
